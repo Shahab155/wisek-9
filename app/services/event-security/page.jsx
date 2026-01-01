@@ -1,14 +1,12 @@
 "use client";
-import Header from "@/components/Header";
-import MobileMenu from "@/components/MobileMenu";
-import Footer from "@/components/Footer";
+
 import Link from "next/link";
 
 export default function ConstructionSecurityPage() {
   return (
     <>
-      <Header />
-      <MobileMenu />
+   
+      
 
       {/* Breadcrumb */}
       <div className="bg-gradient-to-r from-gray-100 to-gray-200 py-4">
@@ -125,7 +123,6 @@ Safe, controlled, and successful events          </p>
         </a>
       </section>
 
-      <Footer />
     </>
   );
 }
