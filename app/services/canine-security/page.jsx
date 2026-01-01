@@ -8,7 +8,7 @@ export default function ConstructionSecurityPage() {
   
 
       {/* Breadcrumb */}
-      <div className="bg-gradient-to-r from-gray-100 to-gray-200 py-4">
+      <div className="bg-gradient-to-r from-gray-100 to-gray-200 ">
         <div className="max-w-7xl mx-auto px-4">
           <nav className="flex text-sm text-gray-600">
             <Link href="/" className="hover:text-red-600 transition">
@@ -122,6 +122,7 @@ Highly trained K9 units for maximum threat detection          </p>
           Get Construction Security Now
         </a>
       </section>
+      
 
     </>
   );

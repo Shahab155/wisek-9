@@ -12,6 +12,7 @@ import ClientSuccess from "../components/ClientSuccess";
 
 // import RegionsUs from "../components/Regions";
 import Cities from "../components/CitiesSlider";
+import AboutCTA from "../components/about/AboutCTA";
 
 
 export default function Home() {
@@ -29,6 +30,8 @@ export default function Home() {
       <Cities /> 
       <ClientSuccess />
        <BlogSection />
+      <AboutCTA />
+       
    
     </>
   );

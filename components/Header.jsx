@@ -138,6 +138,7 @@ export default function Header() {
 
               {/* Services Dropdown */}
               <div className="relative group">
+                <Link href={"/services"}>
                 <button className="flex flex-col items-center px-3 py-2 text-sm font-bold text-white">
                   <FaConciergeBell className="mb-1 text-lg group-hover:text-red-500 transition-colors" />
                   <span className="flex items-center group-hover:text-red-500 transition-colors">
@@ -145,6 +146,7 @@ export default function Header() {
                     <FaChevronDown className="ml-1 text-xs transition-transform group-hover:rotate-180" />
                   </span>
                 </button>
+                </Link>
 
                 <div
                   className={`absolute left-1/2 -translate-x-1/2 top-full mt-4 w-52 rounded-xl shadow-2xl overflow-hidden opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-4 group-hover:translate-y-0 ${
