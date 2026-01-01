@@ -1,10 +1,19 @@
-'use client' 
+'use client';
 import { useEffect } from 'react';
 import Link from 'next/link';
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaLinkedinIn,
+  FaTwitter,
+  FaPhone,
+  FaEnvelope,
+  FaMapMarkerAlt,
+} from 'react-icons/fa';
 
 export default function Footer() {
   useEffect(() => {
-    // Header scroll effect
+    // Enhanced scroll effect for header (if exists)
     const handleScroll = () => {
       const header = document.getElementById('header');
       if (header) {
@@ -19,162 +28,199 @@ export default function Footer() {
     };
 
     window.addEventListener('scroll', handleScroll);
-    
-    // Stats counter animation
+
+    // Animated counters
     const counters = document.querySelectorAll('[data-count]');
-    const countObserver = new IntersectionObserver(
+    const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            const counter = entry.target;
-            const target = parseInt(counter.getAttribute('data-count'));
-            let current = 0;
-            const increment = target / 50;
-
-            const updateCounter = () => {
-              if (current < target) {
-                current += increment;
-                counter.textContent = Math.ceil(current);
-                requestAnimationFrame(updateCounter);
+            const target = parseInt(entry.target.getAttribute('data-count') || '0');
+            const element = entry.target;
+            let count = 0;
+            const increment = target > 100 ? target / 80 : target / 50;
+            const timer = setInterval(() => {
+              count += increment;
+              if (count >= target) {
+                element.textContent = target + (target === 87 ? '%' : target === 1000 ? '+' : '');
+                clearInterval(timer);
               } else {
-                counter.textContent = target;
+                element.textContent = Math.ceil(count) + (target === 87 ? '%' : target === 1000 ? '+' : '');
               }
-            };
-
-            updateCounter();
-            countObserver.unobserve(counter);
+            }, 30);
+            observer.unobserve(entry.target);
           }
         });
       },
       { threshold: 0.5 }
     );
 
-    counters.forEach((counter) => {
-      countObserver.observe(counter);
-    });
+    counters.forEach((counter) => observer.observe(counter));
 
-    // Loading animations
-    const handleLoad = () => {
-      document.querySelectorAll('.loading').forEach((element, index) => {
-        setTimeout(() => {
-          element.style.animationDelay = `${index * 0.2}s`;
-          element.classList.add('fade-in-up');
-        }, index * 100);
-      });
-    };
-
-    window.addEventListener('load', handleLoad);
-
-    // Cleanup event listeners
     return () => {
       window.removeEventListener('scroll', handleScroll);
-      window.removeEventListener('load', handleLoad);
     };
   }, []);
 
   return (
-    <footer className="bg-black text-white py-16">
+    <footer className="bg-gradient-to-b from-black to-gray-950 text-white py-16 border-t border-gray-500">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Stats Counter */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12 text-center">
-          <div className="counter">
-            <div className="text-4xl font-bold text-red-500" data-count="87">
-              0
+        {/* Stats Section */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-10 mb-16 text-center">
+          <div className="group">
+            <div
+              className="text-5xl md:text-6xl font-extrabold text-red-600 mb-3 group-hover:scale-110 transition-transform duration-500"
+              data-count="87"
+            >
+              0%
             </div>
-            <div className="text-sm">% UK Coverage</div>
+            <p className="text-gray-300 font-medium">UK Coverage</p>
           </div>
-          <div className="counter">
-            <div className="text-4xl font-bold text-red-500" data-count="24">
+          <div className="group">
+            <div
+              className="text-5xl md:text-6xl font-extrabold text-red-600 mb-3 group-hover:scale-110 transition-transform duration-500"
+              data-count="24"
+            >
               0
             </div>
-            <div className="text-sm">Hours Service</div>
+            <p className="text-gray-300 font-medium">Hours Service</p>
           </div>
-          <div className="counter">
-            <div className="text-4xl font-bold text-red-500" data-count="1000">
-              0
+          <div className="group">
+            <div
+              className="text-5xl md:text-6xl font-extrabold text-red-600 mb-3 group-hover:scale-110 transition-transform duration-500"
+              data-count="1000"
+            >
+              0+
             </div>
-            <div className="text-sm">+ Clients Protected</div>
+            <p className="text-gray-300 font-medium">Clients Protected</p>
           </div>
-          <div className="counter">
-            <div className="text-4xl font-bold text-red-500" data-count="15">
+          <div className="group">
+            <div
+              className="text-5xl md:text-6xl font-extrabold text-red-600 mb-3 group-hover:scale-110 transition-transform duration-500"
+              data-count="15"
+            >
               0
             </div>
-            <div className="text-sm">Years Experience</div>
+            <p className="text-gray-300 font-medium">Years Experience</p>
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-          {/* Company Info */}
-          <div>
-            <h3 className="text-3xl font-bold text-red-500 mb-4">Wise-K9</h3>
-            <p className="mb-4">
-              SIA-licensed Security Guard Supplier Company to Protect Your Assets
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-12">
+          {/* Company Info - Left Column */}
+          <div className="md:col-span-5">
+            <h2 className="text-4xl font-bold text-red-600 mb-6">Wise-K9</h2>
+            <p className="text-gray-300 leading-relaxed mb-6">
+              SIA-licensed Security Guard Supplier Company dedicated to protecting your assets with professionalism and vigilance.
             </p>
-            <p className="mb-4 text-sm">
-              Serving retail, corporate, construction, healthcare, and public
-              sectors with capable, SIA-approved officers.
+            <p className="text-gray-400 text-sm leading-relaxed mb-8">
+              Serving retail, corporate, construction, healthcare, and public sectors with highly trained, SIA-approved security officers.
             </p>
-            <div className="text-sm space-y-1">
-              <p>Company No. 13043701</p>
-              <p>VAT No. 430 2828 22</p>
+
+            {/* Contact Info */}
+            <div className="space-y-4">
+              <div className="flex items-center gap-4 text-gray-300">
+                <FaMapMarkerAlt className="text-red-500 text-xl" />
+                <span className="text-sm">United Kingdom</span>
+              </div>
+              <div className="flex items-center gap-4 text-gray-300">
+                <FaPhone className="text-red-500 text-xl" />
+                <span className="text-sm">Contact via Website</span>
+              </div>
+              <div className="flex items-center gap-4 text-gray-300">
+                <FaEnvelope className="text-red-500 text-xl" />
+                <span className="text-sm">info@wisek9.co.uk</span>
+              </div>
+            </div>
+
+            {/* Legal Info */}
+            <div className="mt-8 pt-8 border-t border-gray-800">
+              <p className="text-xs text-gray-500">Company No. 13043701</p>
+              <p className="text-xs text-gray-500">VAT No. 430 2828 22</p>
             </div>
           </div>
 
           {/* Quick Links */}
-          <div>
-            <h3 className="text-xl font-bold text-red-500 mb-4">Quick Links</h3>
-            <div className="space-y-2">
-              <Link
-                href="/about"
-                className="block text-white hover:text-red-500 transition-colors duration-300"
-              >
-                About Us
-              </Link>
-              <Link
-                href="/services"
-                className="block text-white hover:text-red-500 transition-colors duration-300"
-              >
-                Our Services
-              </Link>
-              <Link
-                href="/careers"
-                className="block text-white hover:text-red-500 transition-colors duration-300"
-              >
-                Careers
-              </Link>
-              <Link
-                href="/contact"
-                className="block text-white hover:text-red-500 transition-colors duration-300"
-              >
-                Contact
-              </Link>
-              <Link
-                href="/quote"
-                className="block text-white hover:text-red-500 transition-colors duration-300"
-              >
-                Get Quote
-              </Link>
-            </div>
+          <div className="md:col-span-3">
+            <h3 className="text-2xl font-bold text-red-600 mb-6">Quick Links</h3>
+            <ul className="space-y-4">
+              {[
+                { href: '/about', label: 'About Us' },
+                { href: '/services', label: 'Our Services' },
+                { href: '/careers', label: 'Careers' },
+                { href: '/contact', label: 'Contact Us' },
+                { href: '/quote', label: 'Get a Quote' },
+              ].map((link) => (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    className="relative text-gray-300 hover:text-red-500 transition-colors duration-300 after:absolute after:left-0 after:bottom-0 after:w-0 after:h-0.5 after:bg-red-500 after:transition-all after:duration-300 hover:after:w-full"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </div>
 
-          {/* Website Link */}
-          <div>
-            <h3 className="text-xl font-bold text-red-500 mb-4">Explore More</h3>
+          {/* CTA + Social */}
+          <div className="md:col-span-4">
+            <h3 className="text-2xl font-bold text-red-600 mb-6">Stay Connected</h3>
+
+            {/* Main CTA */}
             <Link
               href="https://wisek9.co.uk"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block bg-red-500 hover:bg-red-700 text-white font-bold py-4 px-8 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg"
+              className="inline-block bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white font-bold text-lg py-5 px-10 rounded-full shadow-2xl transition-all duration-500 transform hover:scale-105 hover:shadow-red-500/30 mb-10"
             >
-              Explore wisek9.co.uk
+              Visit wisek9.co.uk
             </Link>
+
+            {/* Social Icons */}
+            <div className="flex gap-4">
+              <a
+                href="#"
+                className="w-12 h-12 bg-gray-800 hover:bg-red-600 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110"
+                aria-label="Facebook"
+              >
+                <FaFacebookF />
+              </a>
+              <a
+                href="#"
+                className="w-12 h-12 bg-gray-800 hover:bg-red-600 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110"
+                aria-label="Instagram"
+              >
+                <FaInstagram />
+              </a>
+              <a
+                href="#"
+                className="w-12 h-12 bg-gray-800 hover:bg-red-600 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110"
+                aria-label="LinkedIn"
+              >
+                <FaLinkedinIn />
+              </a>
+              <a
+                href="#"
+                className="w-12 h-12 bg-gray-800 hover:bg-red-600 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110"
+                aria-label="Twitter"
+              >
+                <FaTwitter />
+              </a>
+            </div>
           </div>
         </div>
 
-        <div className="border-t border-gray-700 pt-8 text-center">
-          <p className="text-sm">
-            © 2024 Wise-K9 Security Services. All rights reserved. | Your Safety,
-            Our Mission | Developed by irisxoft.com
+        {/* Bottom Bar */}
+        <div className="mt-16 pt-10 border-t border-gray-800 text-center">
+          <p className="text-sm text-gray-500">
+            © {new Date().getFullYear()} Wise-K9 Security Services. All rights reserved. 
+            <span className="mx-2">|</span>
+            Your Safety, Our Mission
+            <span className="mx-2">|</span>
+            Developed with ❤️ by{' '}
+            <a href="https://irisxoft.com" className="text-red-500 hover:underline">
+              irisxoft.com
+            </a>
           </p>
         </div>
       </div>

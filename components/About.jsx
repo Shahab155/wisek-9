@@ -1,11 +1,15 @@
-import Footer from "@/components/Footer";
 
-import AboutHeroVideo from "@/components/about/AboutHeroVideo";
-import AboutIntro from "@/components/about/AboutIntro";
-import ServicesIcons from "@/components/about/ServicesIcons";
-import CoverageSection from "@/components/about/CoverageSection";
-import WhyChooseUs from "@/components/about/WhyChooseUs";
-import AboutCTA from "@/components/about/AboutCTA";
+
+
+// import AboutHeroVideo from "./about/AboutHeroVideo";
+// import AboutIntro from "./about/AboutIntro";
+
+import AboutCTA from "./about/AboutCTA";
+import AboutHeroVideo from "./about/AboutHeroVideo";
+import AboutIntro from "./about/AboutIntro";
+import CoverageSection from "./about/CoverageSection";
+import ServicesIcons from "./about/ServicesIcons";
+import WhyChooseUs from "./WhyChooseUs";
 
 export default function AboutPage() {
   return (
@@ -19,7 +23,7 @@ export default function AboutPage() {
         <AboutCTA />
       </main>
 
-      <Footer />
+     
     </>
   );
 }

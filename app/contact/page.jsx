@@ -1,17 +1,14 @@
-import Header from "@/components/Header";
-import MobileMenu from "@/components/MobileMenu";
-import Footer from "@/components/Footer";
-import ContactMe from "@/components/ContactMe";
+import ContactUs from "../../components/ContactUs";
 
 
-export default function ContactUs() {
+
+
+export default function Contact() {
   return (
     <>
-      <Header />
-      <MobileMenu />
-      <ContactMe />
-            <Footer />
-           
+      
+      <ContactUs />
+
           </>
         );
       }

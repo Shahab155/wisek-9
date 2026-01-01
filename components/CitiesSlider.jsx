@@ -20,42 +20,7 @@ export default function Cities() {
 
   return (
     <>
-      {/* ✅ Breadcrumb Section */}
-      <div
-        className="relative bg-center bg-cover bg-no-repeat pt-40 pb-12 md:pt-48 md:pb-16 text-white"
-        style={{ backgroundImage: "url('/assets2/Location-04.jpg')" }}
-      >
-        <div className="absolute inset-0 bg-black/60"></div>
-        <div className="relative z-10 max-w-7xl mx-auto px-4 text-center">
-          <h2 className="text-4xl md:text-5xl font-extrabold mb-4 tracking-wide drop-shadow-md animate-slide-down">
-            UK Cities
-          </h2>
-          <ul className="flex justify-center items-center gap-3 text-gray-300 text-sm md:text-base">
-            <li>
-              <Link href="/" className="hover:text-red-500 transition-colors duration-300 font-medium">
-                Home
-              </Link>
-            </li>
-            <li className="text-gray-400">/</li>
-            <li className="text-red-500 font-semibold">UK Cities</li>
-          </ul>
-        </div>
-        <style jsx>{`
-          @keyframes slideDown {
-            0% {
-              opacity: 0;
-              transform: translateY(-30px);
-            }
-            100% {
-              opacity: 1;
-              transform: translateY(0);
-            }
-          }
-          .animate-slide-down {
-            animation: slideDown 0.8s ease forwards;
-          }
-        `}</style>
-      </div>
+     
 
       {/* ✅ Space After Breadcrumb */}
       <div className="h-8 md:h-12"></div>

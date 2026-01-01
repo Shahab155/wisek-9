@@ -1,7 +1,7 @@
 "use client";
 
-import FadeIn from "@/components/ui/FadeIn";
 import Link from "next/link";
+import FadeIn from "../ui/FadeIn";
 
 export default function AboutCTA() {
   return (

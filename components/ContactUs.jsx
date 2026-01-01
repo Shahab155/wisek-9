@@ -7,7 +7,7 @@ export default function ContactUs() {
     <>
       {/* ✅ Breadcrumb Section with Modern Look */}
       <div
-        className="relative bg-center bg-cover bg-no-repeat pt-40 pb-16 md:pt-48 md:pb-20 text-white"
+        className="relative bg-center bg-cover bg-no-repeat h-[60vh] md:h-[70vh] flex items-center text-white"
         style={{ backgroundImage: "url('/assets2/coverage.jpg')" }}
       >
         {/* Dark Gradient Overlay */}

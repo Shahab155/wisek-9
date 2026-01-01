@@ -139,61 +139,12 @@ export default function RegionsUs() {
         </svg>
       ),
     },
-    {
-      name: 'Yorkshire & Humber',
-      description:
-        'Comprehensive security solutions for Leeds, Sheffield, Bradford, Hull, York, and surrounding Yorkshire areas.',
-      image: '/assets2/Location-10.jpg',
-      pinSvg: (
-        <svg
-          className="w-16 h-16 mx-auto mb-4 group-hover:scale-110 transition-transform duration-300"
-          fill="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
-        </svg>
-      ),
-    },
+   
   ]
 
   return (
     <>
-      {/* ✅ Breadcrumb Section */}
-      <div
-        className="relative bg-center bg-cover bg-no-repeat pt-40 pb-12 md:pt-48 md:pb-16 text-white"
-        style={{ backgroundImage: "url('/assets2/Location-01.jpg')" }}
-      >
-        <div className="absolute inset-0 bg-black/60"></div>
-        <div className="relative z-10 max-w-7xl mx-auto px-4 text-center">
-          <h2 className="text-4xl md:text-5xl font-extrabold mb-4 tracking-wide drop-shadow-md animate-slide-down">
-            Regions We Cover
-          </h2>
-          <ul className="flex justify-center items-center gap-3 text-gray-300 text-sm md:text-base">
-            <li>
-              <Link href="/hero" className="hover:text-red-500 transition-colors duration-300 font-medium">
-                Home
-              </Link>
-            </li>
-            <li className="text-gray-400">/</li>
-            <li className="text-red-500 font-semibold">Regions</li>
-          </ul>
-        </div>
-        <style jsx>{`
-          @keyframes slideDown {
-            0% {
-              opacity: 0;
-              transform: translateY(-30px);
-            }
-            100% {
-              opacity: 1;
-              transform: translateY(0);
-            }
-          }
-          .animate-slide-down {
-            animation: slideDown 0.8s ease forwards;
-          }
-        `}</style>
-      </div>
+  
 
       {/* ✅ Main Regions Section */}
       <section id="regions" className="py-24 bg-neutral-light">

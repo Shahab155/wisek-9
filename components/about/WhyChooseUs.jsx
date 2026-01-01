@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import FadeIn from "@/components/ui/FadeIn";
+import FadeIn from "../ui/FadeIn";
 
 const reasons = [
   "SIA Licensed Guards",

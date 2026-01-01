@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import SlideIn from "@/components/ui/SlideIn";
+import SlideIn from "../ui/SlideIn";
 
 export default function CoverageSection() {
   return (

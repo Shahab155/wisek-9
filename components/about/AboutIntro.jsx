@@ -1,6 +1,7 @@
 "use client";
 
-import FadeIn from "@/components/ui/FadeIn";
+import FadeIn from "../ui/FadeIn";
+
 
 export default function AboutIntro() {
   return (

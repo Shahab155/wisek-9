@@ -55,10 +55,15 @@ export default function WhyChooseUs() {
           ].map((item, i) => (
             <div
               key={i}
-              className="why-card opacity-0 translate-y-8 bg-white/10 backdrop-blur-md p-6 rounded-xl shadow-lg hover:shadow-[0_8px_30px_rgba(255,0,0,0.4)] hover:scale-105 transition-all duration-500"
+              className="why-card group opacity-0 translate-y-8 bg-white/10 backdrop-blur-md p-6 rounded-xl shadow-lg hover:shadow-[0_8px_30px_rgba(255,0,0,0.4)] hover:scale-105 transition-all duration-500"
               style={{ transitionDelay: `${i * 150}ms` }}
             >
-              <img src={item.icon} className="mx-auto w-16 mb-4" alt={item.title} />
+              <img 
+                src={item.icon} 
+                className="mx-auto w-16 mb-4 filter brightness-0 invert hue-rotate-0 saturate-100 transition-all duration-500 group-hover:scale-110 group-hover:drop-shadow-lg group-hover:brightness-110" 
+                style={{ filter: 'brightness(0) saturate(100%) invert(28%) sepia(99%) saturate(7498%) hue-rotate(0deg) brightness(99%) contrast(113%)' }} 
+                alt={item.title} 
+              />
               <h3 className="text-xl font-semibold mb-2 text-red-400">{item.title}</h3>
               <p className="text-gray-300 text-sm leading-relaxed">{item.desc}</p>
             </div>
