@@ -9,23 +9,14 @@
     "lint": "eslint"
   },
   "dependencies": {
-<<<<<<< HEAD
+
     "framer-motion": "^12.23.26",
-=======
-<<<<<<< HEAD
->>>>>>> b61916117bdfea380d2917d94d3c6e924bc46e24
+
     "lucide-react": "^0.562.0",
     "next": "^16.1.1",
     "react": "^19.2.3",
     "react-dom": "^19.2.3",
-<<<<<<< HEAD
-=======
-=======
-    "next": "^14.2.18",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
->>>>>>> d84aecb88e510a7b554129dba94f31f8fa73af71
->>>>>>> b61916117bdfea380d2917d94d3c6e924bc46e24
+
     "react-icons": "^5.5.0"
   },
   "devDependencies": {
