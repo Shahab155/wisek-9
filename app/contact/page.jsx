@@ -1,14 +1,19 @@
-import ContactUs from "../../components/ContactUs";
-
-
-
+import ContactHero from "../../components/contact-components/ContactHero";
+import ContactFormSection from "../../components/contact-components/ContactFormSection";
+import ContactMapDetails from "../../components/contact-components/ContactMapDetails";
+import MainServicesNew from "../../components/common-components/MainServicesNew";
+import PremiumAboutCTALight from "../../components/common-components/PremiumAboutCTALight";
+import Testimonials from "../../components/common-components/Testimonials";
 
 export default function Contact() {
   return (
     <>
-      
-      <ContactUs />
-
-          </>
-        );
-      }
+      <ContactHero />
+      <ContactFormSection />
+      <ContactMapDetails />
+      <MainServicesNew/>
+      <Testimonials/>
+      <PremiumAboutCTALight/>
+    </>
+  );
+}
