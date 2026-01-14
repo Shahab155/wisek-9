@@ -1,29 +1,38 @@
-import MainServicesNew from "../components/common-components/MainServicesNew";
-import PremiumServicesSection from "../components/home-components/PremiumServicesSection";
-import PremiumExcellence from "../components/home-components/PremiumExcellence";
-import PremiumAgencyBenefits from "../components/home-components/PremiumAgencyBenefits";
-import PremiumWhyChooseUsLight from "../components/common-components/PremiumWhyChooseUsLight";
-import PremiumAccreditationSlider from "../components/home-components/PremiumInfiniteAccreditationSlider";
-import PremiumCities from "../components/home-components/PremiumCities";
-import PremiumClientSuccess from "../components/home-components/PremiumClientSuccess";
-import PremiumBlogSection from "../components/home-components/PremiumBlogSection";
-import PremiumHero from "../components/home-components/PremiumHero";
-import PremiumAboutCTALight from "../components/common-components/PremiumAboutCTALight";
+
+import Hero from "../components/Hero";
+import MainServices from "../components/MainServices";
+import AgencyBenefits from "../components/AgencyBenefits";
+import Excellence from "../components/Excellence";
+import CommitmentSection from "../components/CommitmentSection";
+import WhyChooseUs from "../components/WhyChooseUs";
+import AccreditationSlider from "../components/AccreditationSlider";
+import BlogSection from "../components/BlogSection";
+
+import ClientSuccess from "../components/ClientSuccess";
+
+// import RegionsUs from "../components/Regions";
+import Cities from "../components/CitiesSlider";
+import AboutCTA from "../components/about/AboutCTA";
+
 
 export default function Home() {
   return (
     <>
-      <PremiumHero />
-      <MainServicesNew />
-      <PremiumAgencyBenefits />
-      <PremiumServicesSection />
-      <PremiumExcellence />
-      <PremiumWhyChooseUsLight />
-      <PremiumAccreditationSlider />
-      <PremiumCities />
-      <PremiumClientSuccess />
-      <PremiumBlogSection />
-      <PremiumAboutCTALight/>
+      
+      
+      <Hero />
+      <MainServices />
+      <AgencyBenefits />
+      <CommitmentSection />
+      <Excellence />
+      <WhyChooseUs />
+      <AccreditationSlider />
+      <Cities /> 
+      <ClientSuccess />
+       <BlogSection />
+      <AboutCTA />
+       
+   
     </>
   );
 }

@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-  <!-- Shield shape representing security -->
-  <path d="M8 1L12 3.5V7.5C12 12 10 15 8 15C6 15 4 12 4 7.5V3.5L8 1Z" fill="#d32f2f"/>
-  <!-- Padlock inside the shield for security symbolism -->
-  <path d="M7 7H9V9H10C10 10.1 9.1 11 8 11C6.9 11 6 10.1 6 9H7V7Z" fill="white"/>
-  <rect x="7" y="5" width="2" height="2" fill="white" rx="1"/>
-</svg>
