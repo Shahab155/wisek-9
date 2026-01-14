@@ -2,6 +2,7 @@ import "./globals.css";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
+
 export const metadata = {
   title: "Wise-K9",
   description: "SIA-licensed Security Guard Supplier"
