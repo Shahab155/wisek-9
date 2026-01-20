@@ -80,11 +80,11 @@ export default function PremiumBlogSection() {
             <div className="w-16 h-0.5 bg-[#ED1D2B] rounded-full"></div>
           </div>
 
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 tracking-wide">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 tracking-wide">
             Security <span className="text-[#ED1D2B]">Insights</span>
           </h2>
 
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-md text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Stay ahead with the latest security industry trends, expert advice, and best practices from Wise-K9.
           </p>
         </motion.div>
@@ -211,7 +211,7 @@ export default function PremiumBlogSection() {
           className="text-center mt-16"
         >
           <Link href="/blog">
-            <button className="relative inline-flex items-center justify-center bg-white hover:bg-gray-50 text-[#ED1D2B] border-2 border-[#ED1D2B] hover:border-[#c01522] px-10 py-4 rounded-full font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 group overflow-hidden">
+            <button className="relative inline-flex items-center justify-center bg-white hover:bg-gray-50 text-[#ED1D2B] border-2 border-[#ED1D2B] hover:border-[#c01522] px-8 py-4 rounded-full font-bold text-md shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 group overflow-hidden">
               <span className="relative z-10">View All Blog Posts</span>
               <div className="absolute inset-0 bg-[#ED1D2B] opacity-0 group-hover:opacity-5 transition-opacity duration-300"></div>
             </button>

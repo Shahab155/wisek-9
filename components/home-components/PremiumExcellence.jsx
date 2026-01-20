@@ -78,11 +78,11 @@ export default function PremiumExcellence() {
             <div className="w-16 h-1 bg-[#ED1D2B] rounded-full"></div>
           </div>
           
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
             Professional <span className="text-[#ED1D2B]">Excellence</span>
           </h2>
           
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-md text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Our commitment to excellence is demonstrated through industry-leading certifications, nationwide coverage, and unwavering dedication to security standards.
           </p>
         </motion.div>

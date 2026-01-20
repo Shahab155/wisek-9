@@ -74,11 +74,11 @@ export default function PremiumWhyChooseUs() {
             <div className="w-16 h-0.5 bg-[#ED1D2B]"></div>
           </div>
           
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 tracking-wide">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 tracking-wide">
             Why Choose <span className="text-[#ED1D2B]">WiseK9?</span>
           </h2>
           
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-md text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Discover the key advantages that set us apart in the security industry
           </p>
         </motion.div>

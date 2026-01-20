@@ -71,14 +71,14 @@ export default function PremiumClientSuccess() {
           
           <motion.h2 
             variants={item}
-            className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6"
+            className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6"
           >
             Client <span className="text-[#ED1D2B]">Success Stories</span>
           </motion.h2>
           
           <motion.p 
             variants={item}
-            className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed"
+            className="text-md text-gray-600 max-w-3xl mx-auto leading-relaxed"
           >
             See how Wise-K9 delivers tailored security solutions for businesses and events across the UK.
           </motion.p>
@@ -160,7 +160,7 @@ export default function PremiumClientSuccess() {
               </p>
               <Link
                 href="/contact"
-                className="inline-block bg-gradient-to-r from-[#ED1D2B] to-[#c01522] hover:from-[#c01522] hover:to-[#a0101c] text-white px-8 py-4 rounded-full text-lg font-bold shadow-lg hover:shadow-xl transition-all transform hover:scale-105"
+                className="inline-block bg-gradient-to-r from-[#ED1D2B] to-[#c01522] hover:from-[#c01522] hover:to-[#a0101c] text-white px-8 py-4 rounded-full text-md font-semibold shadow-lg hover:shadow-xl transition-all transform hover:scale-105"
               >
                 Request a Free Quote
               </Link>

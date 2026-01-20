@@ -29,7 +29,7 @@ export default function Testimonials() {
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             Trusted by <span className="text-red-600">Clients</span> Across the UK
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-sm text-gray-600 max-w-3xl mx-auto">
             Don't just take our word for it - hear from businesses who have
             experienced our exceptional security services.
           </p>

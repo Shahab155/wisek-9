@@ -8,35 +8,35 @@ export default function PremiumServicesSection() {
   const services = [
     {
       id: 1,
-      title: 'Manned Security',
-      image: '/assets2/Mannguarding.jpg',
+      title: 'Canine Security',
+      image: '/services/canine.jpg',
       description:
-        'Trained professionals providing physical security guarding services for offices, shops, residential, and commercial premises with proactive approach to safety and access control.',
+        'Specially trained dogs for personal protection, property protection, and building searches, providing enhanced detection capabilities and a powerful deterrent presence for maximum security.',
       ctaText: 'Learn More',
     },
     {
       id: 2,
-      title: 'Events Security',
-      image: '/assets2/Event Security-01.jpg',
+      title: 'Manned Guarding',
+      image: '/services/guards.jpg',
       description:
-        'SIA licensed event officers and stewards with expertise in crowd control, conflict resolution, and ensuring safety at music festivals, sporting events, and corporate functions.',
-      ctaText: 'Secure Your Event',
+        'SIA-licensed security guards providing professional manned guarding services with focus on visibility, prevention, and rapid response to ensure your business remains secure.',
+      ctaText: 'Secure Your Premises',
     },
     {
       id: 3,
-      title: 'CCTV Monitoring',
-      image: '/assets2/service-01.jpg',
+      title: 'Mobile Patrols',
+      image: '/services/mobile-patrol.jpg',
       description:
-        'Licensed CCTV operators providing real-time monitoring, detailed incident reporting, and comprehensive surveillance services with professional logging of activities.',
-      ctaText: 'Start Monitoring',
+        'Mobile patrol security involving security officers driving around areas to ensure everything runs smoothly, with 24/7 protection and dog-assisted patrol options available.',
+      ctaText: 'Get Protected',
     },
     {
       id: 4,
-      title: 'Keyholding & Mobile',
-      image: '/assets2/Mobile Patrol.jpg',
+      title: 'Event Security',
+      image: '/services/event-security.jpg',
       description:
-        '24/7 keyholding and mobile security services with alarm response capabilities, professional handling of potential threats, and crime deterrent effect.',
-      ctaText: 'Get Protected',
+        'Professional event security services with crowd management expertise, access control, VIP protection, and first aid trained personnel for all types of events.',
+      ctaText: 'Secure Your Event',
     },
   ]
 
@@ -105,11 +105,11 @@ export default function PremiumServicesSection() {
             <div className="w-16 h-1 bg-[#ED1D2B] rounded-full"></div>
           </div>
 
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
             Premium <span className="text-[#ED1D2B]">Security Solutions</span>
           </h2>
 
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-md text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Discover how Wise-K9 delivers top-tier security solutions tailored to your needs across 87% of the UK.
           </p>
         </motion.div>
@@ -146,11 +146,7 @@ export default function PremiumServicesSection() {
                 {/* Hover content */}
                 <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                   <Link
-                    href={
-                      service.title === 'Keyholding & Mobile'
-                        ? '/services/mobile-security'
-                        : `/services/${service.title.toLowerCase().replace(/ /g, '-').replace(/&/g, 'and')}`
-                    }
+                    href={`/services/${service.title.toLowerCase().replace(/ /g, '-')}`}
                     className="bg-white text-[#ED1D2B] px-6 py-3 rounded-full font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
                   >
                     {service.ctaText}
@@ -161,11 +157,7 @@ export default function PremiumServicesSection() {
               {/* Content */}
               <div className="p-6">
                 <h4 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-[#ED1D2B] transition-colors duration-300">
-                  <Link href={
-                    service.title === 'Keyholding & Mobile'
-                      ? '/services/mobile-security'
-                      : `/services/${service.title.toLowerCase().replace(/ /g, '-').replace(/&/g, 'and')}`
-                  }>
+                  <Link href={`/services/${service.title.toLowerCase().replace(/ /g, '-')}`}>
                     {service.title}
                   </Link>
                 </h4>
@@ -175,11 +167,7 @@ export default function PremiumServicesSection() {
 
                 <div className="flex justify-between items-center">
                   <Link
-                    href={
-                      service.title === 'Keyholding & Mobile'
-                        ? '/services/mobile-security'
-                        : `/services/${service.title.toLowerCase().replace(/ /g, '-').replace(/&/g, 'and')}`
-                    }
+                    href={`/services/${service.title.toLowerCase().replace(/ /g, '-')}`}
                     className="text-[#ED1D2B] font-semibold text-sm hover:text-[#c01522] transition-colors duration-300 flex items-center"
                   >
                     Learn more
@@ -209,7 +197,7 @@ export default function PremiumServicesSection() {
           className="text-center mt-16"
         >
           <Link href="/services">
-            <button className="relative inline-flex items-center justify-center bg-[#ED1D2B] hover:bg-[#c01522] text-white px-10 py-4 rounded-full font-bold text-lg shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 group overflow-hidden">
+            <button className="relative inline-flex items-center justify-center bg-[#ED1D2B] hover:bg-[#c01522] text-white px-8 py-4 rounded-full font-bold text-md shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 group overflow-hidden">
               <span className="relative z-10">View All Services</span>
               <div className="absolute inset-0 bg-gradient-to-r from-[#ED1D2B] to-[#c01522] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>

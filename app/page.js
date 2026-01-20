@@ -1,4 +1,4 @@
-import MainServicesNew from "../components/common-components/MainServicesNew";
+import MainServicesNew from "../components/common-components/Service";
 import PremiumServicesSection from "../components/home-components/PremiumServicesSection";
 import PremiumExcellence from "../components/home-components/PremiumExcellence";
 import PremiumAgencyBenefits from "../components/home-components/PremiumAgencyBenefits";
@@ -20,10 +20,10 @@ export default function Home() {
       <PremiumExcellence />
       <PremiumWhyChooseUsLight />
       <PremiumAccreditationSlider />
-      <PremiumCities />
+      {/* <PremiumCities /> */}
       <PremiumClientSuccess />
       <PremiumBlogSection />
-      <PremiumAboutCTALight/>
+      <PremiumAboutCTALight />
     </>
   );
 }

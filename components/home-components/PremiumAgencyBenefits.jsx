@@ -58,17 +58,17 @@ export default function PremiumAgencyBenefits() {
                   <div className="w-12 h-0.5 bg-[#ED1D2B]"></div>
                 </div>
                 
-                <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 leading-tight">
+                <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-900 leading-tight">
                   We Have <span className="text-[#ED1D2B]">21 Years</span><br className="hidden sm:block" />
                   of Security Excellence
                 </h2>
               </div>
 
-              <p className="text-base lg:text-lg text-gray-700 mb-6 leading-relaxed">
+              <p className="text-base lg:text-md text-gray-700 mb-6 leading-relaxed">
                 With over two decades of dedicated service in the security industry, we've earned a trusted reputation for delivering reliable, professional, and fully scalable protection solutions across diverse sectors.
               </p>
 
-              <p className="text-base lg:text-lg text-gray-700 mb-8 leading-relaxed">
+              <p className="text-base lg:text-md text-gray-700 mb-8 leading-relaxed">
                 Our highly trained SIA-licensed officers, cutting-edge technology, and rapid-response support teams work together to safeguard your people, property, and events — <span className="font-semibold text-[#ED1D2B]">24/7, 365 days a year</span>.
               </p>
 
@@ -97,7 +97,7 @@ export default function PremiumAgencyBenefits() {
 
               <Link
                 href="/contact"
-                className="group relative inline-flex items-center bg-gradient-to-r from-[#ED1D2B] to-[#c01522] hover:from-[#c01522] hover:to-[#a0101c] text-white font-bold text-base lg:text-lg py-4 px-8 lg:px-10 rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 overflow-hidden"
+                className="group relative inline-flex items-center bg-gradient-to-r from-[#ED1D2B] to-[#c01522] hover:from-[#c01522] hover:to-[#a0101c] text-white font-bold text-base lg:text-md py-4 px-7 lg:px-8 rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 overflow-hidden"
               >
                 <span className="relative z-10">Contact Us Today</span>
                 <span className="ml-3 relative z-10 group-hover:translate-x-2 transition-transform duration-300">→</span>

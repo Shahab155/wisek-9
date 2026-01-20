@@ -66,7 +66,7 @@ export default function PremiumAboutCTALight() {
           {/* Main Heading */}
           <motion.h3
             variants={item}
-            className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight"
+            className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight"
           >
             Ready to <span className="text-[#ED1D2B]">Secure</span> Your Site?
           </motion.h3>
@@ -74,7 +74,7 @@ export default function PremiumAboutCTALight() {
           {/* Subtitle */}
           <motion.p
             variants={item}
-            className="text-xl text-gray-700 mb-12 max-w-2xl mx-auto leading-relaxed"
+            className="text-md text-gray-700 mb-12 max-w-2xl mx-auto leading-relaxed"
           >
             Speak with our security experts today for tailored UK security solutions that protect what matters most.
           </motion.p>
@@ -87,7 +87,7 @@ export default function PremiumAboutCTALight() {
             {/* Primary CTA */}
             <Link
               href="/contact"
-              className="group relative inline-flex items-center bg-gradient-to-r from-[#ED1D2B] to-[#c01522] hover:from-[#c01522] hover:to-[#a0101c] text-white font-bold text-lg py-5 px-10 rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 overflow-hidden"
+              className="group relative inline-flex items-center bg-gradient-to-r from-[#ED1D2B] to-[#c01522] hover:from-[#c01522] hover:to-[#a0101c] text-white font-bold text-md py-4 px-8 rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 overflow-hidden"
             >
               <span className="relative z-10">Get Free Security Assessment</span>
               <span className="ml-3 relative z-10 group-hover:translate-x-2 transition-transform duration-300">→</span>
@@ -97,7 +97,7 @@ export default function PremiumAboutCTALight() {
             {/* Secondary CTA */}
             <Link
               href="/quote"
-              className="group relative inline-flex items-center bg-white border-2 border-[#ED1D2B] text-[#ED1D2B] hover:bg-[#ED1D2B] hover:text-white font-bold text-lg py-5 px-10 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+              className="group relative inline-flex items-center bg-white border-2 border-[#ED1D2B] text-[#ED1D2B] hover:bg-[#ED1D2B] hover:text-white font-bold text-md py-4 px-8 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
             >
               <span className="relative z-10">Request a Quote</span>
             </Link>
