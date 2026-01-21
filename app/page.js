@@ -20,7 +20,7 @@ export default function Home() {
       <PremiumExcellence />
       <PremiumWhyChooseUsLight />
       <PremiumAccreditationSlider />
-      {/* <PremiumCities /> */}
+      <PremiumCities />
       <PremiumClientSuccess />
       <PremiumBlogSection />
       <PremiumAboutCTALight />
